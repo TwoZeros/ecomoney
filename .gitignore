@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Настройки для прода
+src/main/resources/application-productive.properties
