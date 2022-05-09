@@ -23,7 +23,7 @@ public class Operation {
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private OperationCategory category;
+    private Category category;
 
     @ManyToOne
     @JoinColumn(name = "bill_id", referencedColumnName ="id")

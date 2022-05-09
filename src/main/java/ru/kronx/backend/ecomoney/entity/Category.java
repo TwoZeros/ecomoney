@@ -14,7 +14,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OperationCategory {
+public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id", nullable = false)
@@ -34,7 +34,7 @@ public class OperationCategory {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        OperationCategory that = (OperationCategory) o;
+        Category that = (Category) o;
         return id.equals(that.id) && personId.equals(that.personId) && name.equals(that.name);
     }
 
