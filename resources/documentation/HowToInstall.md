@@ -18,6 +18,7 @@
 3. Для импорта удобно использывать pgAdmin 4
 
 Видео, демонстрирующий процедуру импорта:
+
 [![Watch the video](https://i9.ytimg.com/vi_webp/XrmquBoZPyI/mqdefault.webp?v=62799cd9&sqp=CPC55pMG&rs=AOn4CLD2sNHm4U9V2qJtQyl18FIQwW5GWA)](https://youtu.be/XrmquBoZPyI)
 
 ### 2. Установка сертификатов ssl
@@ -27,9 +28,10 @@
 Сами сертификаты лежат в каталоге: *resources/ssl*
 
 - rootca.cer - сертификат удостоверяющего центра
-- ecomoney_ssl_rootca_.cer -
+- ecomoney_ssl_rootca_.cer
 
 Видео, демонстрирующее процедуру установки сертификатов:
+
 [![Watch the video](https://i9.ytimg.com/vi/cXcEs7tq_bc/mq2.jpg?sqp=CPzO5pMG&rs=AOn4CLDFNkfUXnyfUdjbMW8eR5opQGHV_Q)](https://youtu.be/cXcEs7tq_bc)
 
 ### 3. Запуск проекта
