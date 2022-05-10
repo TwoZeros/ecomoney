@@ -9,6 +9,10 @@
 - Hibernate / JPA
 - postgresql
 
+## Документация
+[Продецура уставноки, настройки и запуска на локальном ПК](https://github.com/TwoZeros/ecomoney/blob/main/resources/documentation/HowToInstall.md)
+
+
 
 
 
