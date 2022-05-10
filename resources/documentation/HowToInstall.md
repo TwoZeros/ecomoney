@@ -19,7 +19,7 @@
 
 Видео, демонстрирующий процедуру импорта:
 
-[![Watch the video](https://i9.ytimg.com/vi_webp/XrmquBoZPyI/mqdefault.webp?v=62799cd9&sqp=CPC55pMG&rs=AOn4CLD2sNHm4U9V2qJtQyl18FIQwW5GWA)](https://youtu.be/XrmquBoZPyI)
+[![Watch the video](https://i.ibb.co/YbF9qks/2022-05-10-171730627.png)](https://youtu.be/XrmquBoZPyI)
 
 ### 2. Установка сертификатов ssl
 
@@ -32,7 +32,7 @@
 
 Видео, демонстрирующее процедуру установки сертификатов:
 
-[![Watch the video](https://i9.ytimg.com/vi/cXcEs7tq_bc/mq2.jpg?sqp=CPzO5pMG&rs=AOn4CLDFNkfUXnyfUdjbMW8eR5opQGHV_Q)](https://youtu.be/cXcEs7tq_bc)
+[![Watch the video](https://i.ibb.co/k6M7Rg2/2022-05-10-171537682.png)](https://youtu.be/cXcEs7tq_bc)
 
 ### 3. Запуск проекта
 
