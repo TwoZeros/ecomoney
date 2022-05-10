@@ -20,7 +20,7 @@ public class Category {
     @Column(name = "id", nullable = false)
     private Long id;
     @Basic
-    @Column(name = "person_id", nullable = true)
+    @Column(name = "person_id", nullable = true, updatable = false)
     private Long personId;
     @Basic
     @Column(name = "name", nullable = true, length = 100)
