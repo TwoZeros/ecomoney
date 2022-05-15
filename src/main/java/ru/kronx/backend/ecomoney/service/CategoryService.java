@@ -1,10 +1,13 @@
 package ru.kronx.backend.ecomoney.service;
 
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import ru.kronx.backend.ecomoney.entity.Category;
+import ru.kronx.backend.ecomoney.model.CategorySearch;
 import ru.kronx.backend.ecomoney.repository.OperationCategoryRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
@@ -34,5 +37,20 @@ public class CategoryService {
     public boolean isCategoryNameNotNull(Category category) {
         return category.getName() != null || category.getName().trim().length() != 0;
     }
+    public List<Category> findyByTitle(CategorySearch model) {
+        String title = model.getTitle();
+        List<Category> catatogryList = title == null  ?
+                repository.findCategoryByPersonIdOrderByName(model.getUserId()) :
+                repository.findByTitle(model.getUserId(), model.getTitle());
+        if (title == null || title.isBlank()) {
+            return catatogryList;
+        }
+
+        List<Category> catStartWithSearchTitle =  catatogryList.stream()
+                .filter(x -> x.getName().toLowerCase().startsWith(title.toLowerCase()))
+                .collect(Collectors.toList());
+        return catStartWithSearchTitle.size() == 0 ? catatogryList : catStartWithSearchTitle;
+    }
+
 
 }

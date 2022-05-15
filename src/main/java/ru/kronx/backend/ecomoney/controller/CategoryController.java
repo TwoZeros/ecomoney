@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.kronx.backend.ecomoney.entity.Category;
+import ru.kronx.backend.ecomoney.model.CategorySearch;
 import ru.kronx.backend.ecomoney.service.CategoryService;
 
 import java.util.List;
@@ -39,7 +40,19 @@ public class CategoryController {
         }
 
     }
+    @PostMapping("/search")
+    public ResponseEntity<List<Category>> findByTitle(@RequestBody CategorySearch model) {
+        if (model.getUserId() == null || model.getUserId() == 0) {
+            return new ResponseEntity("Некоректный userId", HttpStatus.NOT_ACCEPTABLE);
+        }
+        try {
+            return ResponseEntity.ok(categoryService.findyByTitle(model));
+        }
+        catch (EmptyResultDataAccessException ex) {
+            return new ResponseEntity("Ничего не найдено", HttpStatus.NOT_FOUND);
+        }
 
+    }
     @PostMapping("/new")
     public ResponseEntity createCategory(@RequestBody Category category) {
         if (category.getId() != null && category.getId() != 0) {
