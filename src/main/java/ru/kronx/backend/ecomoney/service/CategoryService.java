@@ -7,6 +7,7 @@ import ru.kronx.backend.ecomoney.model.CategorySearch;
 import ru.kronx.backend.ecomoney.repository.OperationCategoryRepository;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Service
@@ -39,9 +40,12 @@ public class CategoryService {
     }
     public List<Category> findyByTitle(CategorySearch model) {
         String title = model.getTitle();
-        List<Category> catatogryList = title == null  ?
+        List<Category> catatogryList = title == null || title.isBlank() ?
                 repository.findCategoryByPersonIdOrderByName(model.getUserId()) :
                 repository.findByTitle(model.getUserId(), model.getTitle());
+        if (catatogryList.isEmpty()) {
+            throw new NoSuchElementException();
+        }
         if (title == null || title.isBlank()) {
             return catatogryList;
         }

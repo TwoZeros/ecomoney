@@ -9,6 +9,7 @@ import ru.kronx.backend.ecomoney.model.CategorySearch;
 import ru.kronx.backend.ecomoney.service.CategoryService;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/category")
@@ -48,7 +49,7 @@ public class CategoryController {
         try {
             return ResponseEntity.ok(categoryService.findyByTitle(model));
         }
-        catch (EmptyResultDataAccessException ex) {
+        catch (NoSuchElementException ex) {
             return new ResponseEntity("Ничего не найдено", HttpStatus.NOT_FOUND);
         }
 
