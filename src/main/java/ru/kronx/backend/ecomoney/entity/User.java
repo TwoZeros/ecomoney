@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ru.kronx.backend.ecomoney.model.Role;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -29,7 +30,9 @@ public class User {
 
     @Column(name = "email", nullable = false, length = 255)
     private String email;
-
+    @Column(name = "role", nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
 //    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
 //    private List<Bill> bills;
 
