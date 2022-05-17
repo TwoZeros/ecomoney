@@ -1,4 +1,4 @@
-package ru.kronx.backend.ecomoney.secure.config;
+package ru.kronx.backend.ecomoney.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
