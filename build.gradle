@@ -35,6 +35,7 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
 
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
     //Tесты
 //  testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
